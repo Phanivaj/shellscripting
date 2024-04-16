@@ -14,10 +14,10 @@ dnf install mysql -y
 if [ $? -eq 0 ] 
 then
 echo "MySQL installation -- successfully"
-exit 1
+exit 0
 else 
 echo "MySQL installation -- failed"
-exit 1  
+exit 0  
 fi
 dnf install gitt -y
 
