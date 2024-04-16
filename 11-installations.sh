@@ -18,5 +18,7 @@ exit 1
 else 
 echo "MySQL installation -- failed"
 exit 0  
-echo "is script still proceeding"
+fi
+
+#echo "is script still proceeding"
 
