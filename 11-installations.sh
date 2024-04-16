@@ -1,7 +1,7 @@
 #!/bin/bash
 
 username=$(id -u)
-if [$username -ne 0]
+if [ $username -ne 0 ]
 then
 echo "please use root user acces for the installation"
 else
