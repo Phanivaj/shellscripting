@@ -20,7 +20,7 @@ echo "MySQL installation -- success"
 
 fi
 
-dnf install gitt -y
+dnf install git -y
 
 if [ $? -ne 0 ] 
 then
