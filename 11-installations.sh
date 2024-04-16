@@ -17,8 +17,17 @@ echo "MySQL installation -- successfully"
 exit 1
 else 
 echo "MySQL installation -- failed"
-exit 0  
+exit 1  
 fi
+dnf install gitt -y
 
+if [ $? -eq 0 ] 
+then
+echo "gitt installation -- successfully"
+exit 1
+else 
+echo "gitt installation -- failed"
+exit 1 
+fi
 #echo "is script still proceeding"
 
