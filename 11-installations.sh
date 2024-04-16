@@ -11,24 +11,24 @@ fi
 
 dnf install mysql -y
 
-if [ $? -eq 0 ] 
+if [ $? -ne 0 ] 
 then
-echo "MySQL installation -- successfully"
-exit 0
-else 
 echo "MySQL installation -- failed"
-exit 0  
+exit 1
+else 
+echo "MySQL installation -- success"
+
 fi
 
 dnf install gitt -y
 
-if [ $? -eq 0 ] 
+if [ $? -ne 0 ] 
 then
-echo "git installation -- successfully"
+echo "git installation -- failed"
 exit 1
 else 
-echo "git installation -- failed"
-exit 1 
+echo "git installation -- success"
+
 fi
 #echo "is script still proceeding"
 
