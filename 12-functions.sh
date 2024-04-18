@@ -3,6 +3,8 @@
 username=$(id -u)
 userid=$(whoami)
 date=$(date +%F-%H-%M-%S)
+logfilepath=/tmp/$(echo $0 | cut -d. -f1).log
+echo $logfilepath
 R=\e[32m
 G=\e[33m
 echo $userid Executing $0
