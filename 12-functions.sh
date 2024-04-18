@@ -4,6 +4,7 @@ username=$(id -u)
 userid=$(whoami)
 date=$(date +%F-%H-%M-%S)
 logfilepath=/tmp/$(echo $0 | cut -d. -f1).log
+mkdir $logfilepath
 echo $logfilepath
 R=\e[32m
 G=\e[33m
@@ -26,11 +27,11 @@ validate(){
     echo $2 .....success
    fi
 }
-dnf install mysql -y
+dnf install mysql -y &>>$logfilepath
 
 validate $? "Installation of myqsl"
 
-dnf install git -y
+dnf install git -y &>>$logfilepath
 
 validate $? "Installation of GIt"
 #echo "is script still proceeding"
