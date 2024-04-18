@@ -32,7 +32,7 @@ validate(){
 for i in $@
 do
   dnf list installed $i &>>$logfilepath
-  if [ &? -eq 0 ]
+  if [ $? -eq 0 ]
   then
   ech0 -e " $Y Installation of $i is $G skipped $N"
   else
