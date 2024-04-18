@@ -34,7 +34,7 @@ do
   dnf list installed $i &>>$logfilepath
   if [ $? -eq 0 ]
   then
-  ech0 -e " $Y Installation of $i is $G skipped $N"
+  echo -e "$Y Installation of $i is $G skipped $N"
   else
   dnf install $i -y &>>$logfilepath
   validate $? "Installation of $i"
