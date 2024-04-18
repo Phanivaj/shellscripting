@@ -3,7 +3,7 @@
 username=$(id -u)
 userid=$(whoami)
 date=$(date +%F-%H-%M-%S)
-logfilepath=/tmp/$(echo $0 | cut -d. -f1).log
+logfilepath=/tmp/$(echo $0 | cut -d. -f1)-$date.log
 touch $logfilepath
 echo $logfilepath
 R=\e[32m
