@@ -23,10 +23,10 @@ fi
 validate(){
     if [ $1 -ne 0 ]
     then
-    echo -e "$Y $2 .... $R failed $N"
+    echo -e "$Y $2 ....$R failed $N"
     exit 1
     else
-    echo -e "$Y $2 ..... -e $G success $N"
+    echo -e "$Y $2 .....$G success $N"
    fi
 }
 dnf install mysql -y &>>$logfilepath
