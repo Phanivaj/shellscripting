@@ -6,8 +6,10 @@ date=$(date +%F-%H-%M-%S)
 logfilepath=/tmp/$(echo $0 | cut -d. -f1)-$date.log
 #touch $logfilepath
 echo $logfilepath
-R=\e[32m
-G=\e[33m
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="e\[0m
 echo $userid Executing $0
 echo "Execution started at $date"
 if [ $username -ne 0 ]
@@ -21,10 +23,10 @@ fi
 validate(){
     if [ $1 -ne 0 ]
     then
-    echo $2 ....failed
+    echo -e $Y $2 .... $R failed $N
     exit 1
     else
-    echo $2 .....success
+    echo -e $Y $2 ..... -e $G success $N
    fi
 }
 dnf install mysql -y &>>$logfilepath
