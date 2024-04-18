@@ -9,7 +9,7 @@ echo $logfilepath
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
-N="e\[0m
+N="e\[0m"
 echo $userid Executing $0
 echo "Execution started at $date"
 if [ $username -ne 0 ]
@@ -23,10 +23,10 @@ fi
 validate(){
     if [ $1 -ne 0 ]
     then
-    echo -e $Y $2 .... $R failed $N
+    echo -e "$Y $2 .... $R failed $N"
     exit 1
     else
-    echo -e $Y $2 ..... -e $G success $N
+    echo -e "$Y $2 ..... -e $G success $N"
    fi
 }
 dnf install mysql -y &>>$logfilepath
