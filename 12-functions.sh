@@ -13,8 +13,12 @@ echo "you are a root user"
 fi
 
 validate(){
-    echo -e $R $2 failed
-    echo -e $G $2 successful
+    if [$1 -ne 0 ]
+    then
+    echo $2 failed
+    exit 1
+    else
+    echo $2 success
 }
 dnf install mysql -y
 
