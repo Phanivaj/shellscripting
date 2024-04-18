@@ -1,9 +1,11 @@
 #!/bin/bash
 
 username=$(id -u)
+date=$(date +%F-%H-%M-%S)
 R=\e[32m
 G=\e[33m
-
+echo $UNAME Executing $0
+echo "Execution started at $date"
 if [ $username -ne 0 ]
 then
 echo "please use root user acces for the installation"
